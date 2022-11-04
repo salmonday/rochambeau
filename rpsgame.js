@@ -7,12 +7,12 @@ function compChoice() {
 }
 
 // RPS game round
-function playGame() {
+function gamePlay() {
     // Player input rock, paper, or scissors
     let playerChoice = prompt("rock, paper, or scissors?")
     playerChoice = playerChoice.toLowerCase();
     // Get computer choice
-    const compPlay = compChoice();
+    let compPlay = compChoice();
     // Player win conditions
     if ((playerChoice == 'rock' && compPlay == 'scissors')|| 
         (playerChoice == 'paper' && compPlay == 'rock') || 
@@ -47,7 +47,7 @@ function game() {
     while (rounds < 5) {
         rounds++;
         // Check round result
-        result = playGame();
+        result = gamePlay();
         // On player win, player score increases by 1
         if (result == "win") {
             pScore++;
